@@ -21,4 +21,3 @@ yarn dev
 # or
 pnpm dev
 ```
-# circle-programmable-wallet-test-server

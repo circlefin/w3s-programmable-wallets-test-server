@@ -66,7 +66,7 @@ export async function POST(request) {
             headers: {
                 'Authorization': `Bearer ${process.env.CIRCLE_API_KEY}`,
                 'Content-Type': 'application/json',
-                'X-User-Token': data2['response']['data']['userToken'],
+                'X-User-Token': data2['data']['userToken'],
             },
             body: JSON.stringify({
                 'idempotencyKey': v4(),
@@ -83,9 +83,9 @@ export async function POST(request) {
 
         return NextResponse.json({
             'userId': user_id,
-            'userToken': data2['response']['data']['userToken'],
-            'secretKey': data2['response']['data']['encryptionKey'],
-            'challengeId': data3['response']['data']['challengeId'],
+            'userToken': data2['data']['userToken'],
+            'encryptionKey': data2['data']['encryptionKey'],
+            'challengeId': data3['data']['challengeId'],
         });
     } catch (e) {
         console.log(e);

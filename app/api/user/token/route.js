@@ -40,8 +40,8 @@ export async function POST(request) {
 
     return NextResponse.json({ 
         'userId': userId,
-        'userToken': data['response']['data']['userToken'],
-        'secretKey': data['response']['data']['encryptionKey'],
+        'userToken': data['data']['userToken'],
+        'encryptionKey': data['data']['encryptionKey'],
         'challengeId': ""
      });
 }
