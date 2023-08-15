@@ -40,7 +40,7 @@ export async function GET(request) {
             return NextResponse.json(data, { status: 500 })
         }
 
-        return NextResponse.json(data['response']['data']['wallets']);
+        return NextResponse.json(data['data']['wallets']);
     } catch (e) {
         console.log(e);
         return NextResponse.json(e, { status: 500 });

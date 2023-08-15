@@ -38,8 +38,7 @@ export async function GET(request, params) {
 
         console.log(data)
 
-        //console.log(data['response']['data']['tokenBalances']);
-        return NextResponse.json(data['response']['data']['tokenBalances']);
+        return NextResponse.json(data['data']['tokenBalances']);
     } catch (e) {
         console.log(e);
         return NextResponse.json(e, { status: 500 });
