@@ -27,6 +27,7 @@ export async function POST(request) {
             headers: {
                 'Authorization': `Bearer ${process.env.CIRCLE_API_KEY}`,
                 'Content-Type': 'application/json',
+                'User-Agent': 'PW-TEST-SERVER',
             },
             body: JSON.stringify({
                 'userId': user_id,
