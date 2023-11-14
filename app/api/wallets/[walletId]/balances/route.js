@@ -31,6 +31,7 @@ export async function GET(request, params) {
                 'Authorization': `Bearer ${process.env.CIRCLE_API_KEY}`,
                 'Content-Type': 'application/json',
                 'X-User-Token': userTokenFromHeader,
+                'User-Agent': 'PW-TEST-SERVER',
             },
         });
 
